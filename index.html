@@ -210,8 +210,8 @@
             { title: "Current Time", info: "9:33 AM." },
             { title: "Address of Origin", info: "385 NW Miller Ave, Gresham, OR 97030." },
             { title: "Address of Destination", info: "12680 SW Walnut St, Tigard, OR 97223." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "27.34 miles." },
+            { title: "Estimated Time to Destination", info: "47 minutes." },
             { title: "State of Charge of Battery", info: "10% charge." },
             { title: "Range of Current Battery", info: "30 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "22 miles." },
@@ -229,10 +229,10 @@
                 name: 'Fred Meyer',
 
                 location: '7555 SW Barbur Blvd, Portland, OR 97219, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '20.41',
+                originTime: '34',
+                destDistance: '7.09',
+                destTime: '20',
 
                 waitTime: [
                         { type: 'J1772', value: '0' },
@@ -272,10 +272,10 @@
                 name: 'Rustom Nissan of Portland',
 
                 location: '1212 NE 122nd Ave, Portland, OR, 97230',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '6.87',
+                originTime: '21',
+                destDistance: '18.65',
+                destTime: '36',
 
                 
                 waitTime: [
@@ -944,8 +944,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
